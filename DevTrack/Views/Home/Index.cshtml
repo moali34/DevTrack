@@ -1,0 +1,44 @@
+﻿@model DevTrack.Models.DashboardViewModel
+
+<div class="container mt-4">
+    <h2 class="mb-4">Dashboard</h2>
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="card text-bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Projects</h5>
+                    <p class="card-text fs-3">@Model.ProjectCount</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Open Tasks</h5>
+                    <p class="card-text fs-3">@Model.OpenTasks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">In Progress</h5>
+                    <p class="card-text fs-3">@Model.InProgressTasks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Done Tasks</h5>
+                    <p class="card-text fs-3">@Model.DoneTasks</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

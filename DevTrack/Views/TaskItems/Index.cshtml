@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DevTrack.Models.TaskItem>
+@using DevTrack.Models
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Project</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Status</td>
+                <td>@task.Project?.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
